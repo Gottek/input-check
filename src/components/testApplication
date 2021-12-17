@@ -1,9 +1,10 @@
 import React, { useState} from "react";
+import ReactDOM from "react-dom";
 
 const Post = ({ post }) => {
     return (
         <div>
-            {post.title} {post.author}
+            {post.title,post.author}
             {post.url}
             {post.likes}
         </div>
@@ -57,7 +58,7 @@ const PostForm = ({
 const Rows = ({ rows }) => {
     return <div>{rows}</div>;
 };
-const App = () => {
+const TestApp = () => {
     const [posts, setPosts] = useState([]);
     const [likes, setLikes] = useState(0);
     const [newTitle, setNewTitle] = useState("");
@@ -65,6 +66,7 @@ const App = () => {
     const [showAll, setShowAll] = useState(true);
     const [newFilter, setNewFilter] = useState("");
     const [newURL, setNewURL] = useState("");
+    debugger;
     const addPost = event => {
         event.preventDefault();
         const postObject = {
@@ -137,4 +139,4 @@ const App = () => {
     );
 };
 
-export default App;
+export default TestApp;
